@@ -1,0 +1,12 @@
+#footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+#footer div {
+    font-size: 2rem;
+    font-family: "Kanit";
+}

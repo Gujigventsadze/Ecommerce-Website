@@ -1,0 +1,47 @@
+@keyframes heroFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #hero-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #hero-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: heroFadeIn 1s ease-out forwards;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+     
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    align-items: center;
+}
+.hero-container h2 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Kanit";
+    font-weight: 500;
+    line-height: 4rem;
+}
+.category-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}

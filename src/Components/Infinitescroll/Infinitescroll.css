@@ -1,0 +1,62 @@
+#companies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#companies h1 {
+    font-size: 4rem;
+    font-family: "Kanit";
+}
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.logos {
+    width: 70%;
+    overflow: hidden;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 5rem 1rem;
+    white-space: nowrap;
+    border-radius: 4rem;
+    position: relative;
+}
+.logos::before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(to left, rgb(255, 255, 255, 0), white);
+}
+
+
+.logos::after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), white);
+}
+.logos-slide {
+    animation: slide 20s infinite linear;
+    display: inline-block;
+}
+.logos-slide img {
+    height: 150px;
+    margin-right: 50px;
+}
+
+

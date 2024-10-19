@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Baloo+Paaji+2:wght@400..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+KR:wght@100..900&family=Oswald:wght@200..700&family=Protest+Strike&display=swap');
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    to {
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+  
+  #intro {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  
+  #intro:target, #intro:in-range {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.6s ease-out forwards; 
+  }
+  
+.intro-container {
+    width: 70%;
+    display: flex;
+}
+.left-side, .right-side {
+    flex: 1;
+}
+.left-side {
+    font-size: 6rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    line-height: 5rem;
+}
+.shop-now {
+    height: 5rem;
+    width: 15rem;
+    font-family: "Kanit";
+    font-size: 2rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;  
+    overflow: hidden;
+    transition: color 0.2s ease-in-out;
+}
+.shop-now::after {
+    content: "";
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    transition: width 0.2s ease-in-out;
+    border-radius: inherit;
+    z-index: -1;
+}
+.shop-now:hover::after {
+    width: 100%;
+}
+.shop-now:hover {
+    color: white;
+}
+.right-side {
+    display: flex;
+    justify-content: center;
+}
